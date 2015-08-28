@@ -46,10 +46,22 @@
   </licenses>
 
   <properties>
-    <hawkular.metrics.version>0.5.0.Final</hawkular.metrics.version>
-    <hawkular.inventory.version>0.3.2.Final</hawkular.inventory.version>
-    <hawkular.inventory.json.helper.version>0.3.2.Final</hawkular.inventory.json.helper.version>
-    <resteasy.version>3.0.8.Final</resteasy.version>
+    <!-- Hawkular -->
+    <version.org.hawkular.metrics>0.5.0.Final</version.org.hawkular.metrics>
+    <version.org.hawkular.inventory>0.3.2.Final</version.org.hawkular.inventory>
+
+    <!-- 3rd party dependencies-->
+    <version.org.jboss.resteasy>3.0.8.Final</version.org.jboss.resteasy>
+    <version.com.fasterxml.jackson>2.6.0</version.com.fasterxml.jackson>
+    <version.com.google.guava>18.0</version.com.google.guava>
+    <version.org.apache.commons>3.3.2</version.org.apache.commons>
+    <version.commons.io>2.4</version.commons.io>
+    <version.org.slf4j>1.7.12</version.org.slf4j>
+
+    <!-- test scope dependencies -->
+    <version.org.testng>6.9.4</version.org.testng>
+    <version.org.apache.commons.math>3.5</version.org.apache.commons.math>
+    <version.org.apache.httpcomponents>4.4.1</version.org.apache.httpcomponents>
     <excluded.tests>nothing-to-exclude</excluded.tests>
   </properties>
 
@@ -57,32 +69,33 @@
     <dependency>
       <groupId>org.hawkular.metrics</groupId>
       <artifactId>hawkular-metrics-core-api</artifactId>
-      <version>${hawkular.metrics.version}</version>
+      <version>${version.org.hawkular.metrics}</version>
     </dependency>
 
     <dependency>
       <groupId>org.hawkular.inventory</groupId>
       <artifactId>hawkular-inventory-api</artifactId>
-      <version>${hawkular.inventory.version}</version>
+      <version>${version.org.hawkular.inventory}</version>
     </dependency>
 
     <dependency>
       <groupId>org.hawkular.inventory</groupId>
       <artifactId>hawkular-inventory-json-helper</artifactId>
-      <version>${hawkular.inventory.json.helper.version}</version>
+      <version>${version.org.hawkular.inventory}</version>
     </dependency>
 
 
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.6.0</version>
+      <version>${version.com.fasterxml.jackson}</version>
     </dependency>
 
 
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client</artifactId>
+      <version>${version.org.jboss.resteasy}</version>
     </dependency>
 
     <dependency>
@@ -109,51 +122,52 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>18.0</version>
+      <version>${version.com.google.guava}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.3.2</version>
+      <version>${version.org.apache.commons}</version>
     </dependency>
 
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.4</version>
+      <version>${version.commons.io}</version>
     </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>1.7.12</version>
+      <version>${version.org.slf4j}</version>
     </dependency>
 
     <!-- test -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>6.9.4</version>
+      <version>${version.org.testng}</version>
       <scope>test</scope>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>2.0.5-beta</version>
       <scope>test</scope>
     </dependency>
-
+-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
-      <version>3.2</version>
+      <version>${version.org.apache.commons.math}</version>
     </dependency>
+
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.4.1</version>
+      <version>${version.org.apache.httpcomponents}</version>
     </dependency>
   </dependencies>
 
